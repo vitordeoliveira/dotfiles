@@ -1,0 +1,5 @@
+# Ignore all plugins
+/tmux/plugins/*
+
+# But do not ignore the tpm directory
+!/tmux/plugins/tpm
