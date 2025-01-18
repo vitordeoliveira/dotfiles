@@ -1,0 +1,6 @@
+auto-cpufreq
+brave-bin
+paru
+paru-debug
+timeshift-autosnap
+wl-gammarelay
