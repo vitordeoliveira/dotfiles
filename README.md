@@ -1,5 +1,7 @@
 # dotfiles
 
+## the readme is more to me than you thief...
+
 cp * ~/.config/
 
 git submodule update --init --recursive
