@@ -1,102 +1,255 @@
+/* ================================ */
+/*            Common CSS            */
+/* ================================ */
+
 @import "mocha.css";
 
 * {
-  font-family: FantasqueSansMono Nerd Font;
-  font-size: 17px;
+  /* `otf-font-awesome` is required to be installed for icons */
+  padding: 0;
+  border-radius: 0;
   min-height: 0;
+  margin: 0;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
 }
 
-#waybar {
-  background: transparent;
+/* the whole window */
+window#waybar {
+  background: @base;
   color: @text;
-  margin: 5px 5px;
+  padding: 0px 5px;
+  margin: 0;
+  border-radius: 15px;
 }
 
+.modules-left {
+  padding-left: 5px;
+}
+
+.modules-right {
+  padding-right: 5px;
+}
+
+#custom-rofi,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover,
+#workspaces button.urgent,
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#custom-memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 2px;
+  padding-right: 5px;
+  padding-left:  5px;
+}
+
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#custom-memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  padding-right: 4px;
+  margin: 5px 0px;
+}
+
+#custom-rofi {
+  /* border: 2px solid #458588; */
+  /* border-radius: 5px; */
+  background: transparent;
+  padding: 0 6px;
+  margin: 5px 0px;
+}
+
+/* ================================ */
+/*       workspaces module          */
+/* ================================ */
 #workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
-  margin-left: 1rem;
+  margin: 0px;
 }
 
 #workspaces button {
-  color: @lavender;
-  border-radius: 1rem;
-  padding: 0.4rem;
-}
-
-#workspaces button.active {
-  color: @sky;
-  border-radius: 1rem;
+  color: #fff4d2;
+  background: @surface0;
+  /* border: 2px solid #fff4d2; */
+  min-width: 25px;
+  padding: 0 4px;
+  margin: 5px 3px;
+  border-radius: 12px;
 }
 
 #workspaces button:hover {
-  color: @sapphire;
-  border-radius: 1rem;
+  background: @surface0;
+  border: 2px solid @red;
+  border-radius: 12px;
 }
 
-#custom-music,
-#tray,
-#backlight,
-#clock,
-#battery,
-#pulseaudio,
-#custom-lock,
-#custom-power {
-  background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
+#workspaces button.visible {
+  border: 2px solid @green;
+  border-radius: 12px;
+  background: @surface0;
 }
 
-#clock {
-  color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+#workspaces button.visible:hover {
+  border: 2px solid @green;
+  border-radius: 12px;
+  background: @surface0;
 }
 
-#battery {
-  color: @green;
+#workspaces button.active {
+  border: 2px solid @green;
+  border-radius: 12px;
+  background: @surface0;
 }
 
-#battery.charging {
-  color: @green;
+#workspaces button.active:hover {
+  border: 2px solid @green;
+  border-radius: 12px;
+  background: @surface0;
 }
 
-#battery.warning:not(.charging) {
+#workspaces button.urgent {
+  border: 2px solid #cc241d;
+  border-radius: 12px;
+  background: #ea6962;
+}
+
+/* ================================ */
+/*            window                 */
+/* ================================ */
+
+#window {
+  color: @lavender;
+  background: @surface0;
+  border-radius: 12px;
+  padding: 0 10px 0 10px;
+  /* border: 2px solid #d3869b; */
+}
+
+/* ================================ */
+/*            tray                 */
+/* ================================ */
+
+#tray {
+  /* padding: 0 6px; */
+  background: @surface0;
+}
+
+/* ================================ */
+/*            disk                 */
+/* ================================ */
+
+#disk {
+  color: #ea6962;
+  border: 2px solid #ea6962;
+}
+
+/* ================================ */
+/*            cpu                  */
+/* ================================ */
+#cpu {
+  color: #e78a4e;
+  border: 2px solid #e78a4e;
+}
+
+/* ================================ */
+/*            temp                  */
+/* ================================ */
+#temperature {
+  color: #d8a657;
+  border: 2px solid #d8a657;
+}
+
+#temperature.critical {
+  color: #cc241d;
+  border: 2px solid #cc241d;
+}
+
+/* ================================ */
+/*            backlight             */
+/* ================================ */
+#custom-backlight {
+  color: #f6c657;
+}
+
+/* ================================ */
+/*            memory                */
+/* ================================ */
+#custom-memory {
+  color: #458588;
+  border: 2px solid #458588;
+}
+
+/* ================================ */
+/*         pulseaudio               */
+/* ================================ */
+#pulseaudio {
   color: @red;
 }
 
-#backlight {
-  color: @yellow;
+/* ================================ */
+/*            battery               */
+/* ================================ */
+#battery {
+  color: #fbf1c7;
 }
 
-#backlight, #battery {
-    border-radius: 0;
+#battery.critical {
+  color: #cc241d;
 }
 
-#pulseaudio {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+#battery.warning {
+  color: #e78a4e;
+}
+/* ================================ */
+/*            clock                 */
+/* ================================ */
+#clock.time {
+  color: #fbf1c7;
 }
 
-#custom-music {
-  color: @mauve;
-  border-radius: 1rem;
+#clock.date {
+  color: #fbf1c7;
 }
 
-#custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
+#mpris {
+  color: @text;
+  border-radius: 21px;
+  background: @surface0;
+  padding: 5px 5px;
+  margin: 1px 1px; 
 }
 
-#custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+#custom-notification {
+  color: #fbf1c7;
+  font-size: 14px;
+  padding: 2px 2px;
 }
