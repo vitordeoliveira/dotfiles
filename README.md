@@ -14,3 +14,11 @@ paru -S - < aur_deps.txt
 
 pacman -Qqen > arch_deps.txt
 paru -Qmq > aur_deps.txt
+
+ln -s ~/dotfiles/nvim/ ~/.config/
+
+rm -rf ~/.config/hypr/ && ln -sf ~/dotfiles/hypr/ ~/.config/
+
+ln -sf ~/dotfiles/waybar/ ~/.config/
+
+ln -sf ~/dotfiles/lazygit/ ~/.config/
