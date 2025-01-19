@@ -20,7 +20,6 @@
 window#waybar {
   background: @base;
   color: @text;
-  padding: 0px 5px;
   margin: 0;
   border-radius: 15px;
 }
@@ -30,7 +29,7 @@ window#waybar {
 }
 
 .modules-right {
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 #custom-rofi,
@@ -56,7 +55,7 @@ window#waybar {
 #battery.warning,
 #clock {
   font-family: JetBrainsMono Nerd Font Propo;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
   border-radius: 2px;
   padding-right: 5px;
@@ -78,7 +77,6 @@ window#waybar {
 #battery.warning,
 #clock {
   padding-right: 4px;
-  margin: 5px 0px;
 }
 
 #custom-rofi {
@@ -93,53 +91,25 @@ window#waybar {
 /*       workspaces module          */
 /* ================================ */
 #workspaces {
-  margin: 0px;
+  border-radius: 1rem 0 0 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
 }
 
 #workspaces button {
-  color: #fff4d2;
-  background: @surface0;
-  /* border: 2px solid #fff4d2; */
-  min-width: 25px;
-  padding: 0 4px;
-  margin: 5px 3px;
-  border-radius: 12px;
-}
-
-#workspaces button:hover {
-  background: @surface0;
-  border: 2px solid @red;
-  border-radius: 12px;
-}
-
-#workspaces button.visible {
-  border: 2px solid @green;
-  border-radius: 12px;
-  background: @surface0;
-}
-
-#workspaces button.visible:hover {
-  border: 2px solid @green;
-  border-radius: 12px;
-  background: @surface0;
+  color: @base;
+  border-radius: 1rem;
+  padding: 0.4rem;
 }
 
 #workspaces button.active {
-  border: 2px solid @green;
-  border-radius: 12px;
-  background: @surface0;
+  color: @mauve;
+  border-radius: 1rem;
 }
 
-#workspaces button.active:hover {
-  border: 2px solid @green;
-  border-radius: 12px;
-  background: @surface0;
-}
-
-#workspaces button.urgent {
-  border: 2px solid #cc241d;
-  border-radius: 12px;
-  background: #ea6962;
+#workspaces button:hover {
+  color: @sapphire;
 }
 
 /* ================================ */
@@ -149,9 +119,11 @@ window#waybar {
 #window {
   color: @lavender;
   background: @surface0;
-  border-radius: 12px;
+  border-radius: 0 1rem 1rem 0;
   padding: 0 10px 0 10px;
-  /* border: 2px solid #d3869b; */
+  margin-left: -1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* ================================ */
@@ -160,7 +132,7 @@ window#waybar {
 
 #tray {
   /* padding: 0 6px; */
-  background: @surface0;
+  /*background: @surface0;*/
 }
 
 /* ================================ */
@@ -219,37 +191,37 @@ window#waybar {
 /*            battery               */
 /* ================================ */
 #battery {
-  color: #fbf1c7;
+  color: @green;
 }
 
 #battery.critical {
-  color: #cc241d;
+  color: @red;
 }
 
 #battery.warning {
-  color: #e78a4e;
+  color: @peach;
 }
 /* ================================ */
 /*            clock                 */
 /* ================================ */
 #clock.time {
-  color: #fbf1c7;
 }
 
 #clock.date {
-  color: #fbf1c7;
 }
 
-#mpris {
-  color: @text;
-  border-radius: 21px;
-  background: @surface0;
-  padding: 5px 5px;
-  margin: 1px 1px; 
-}
 
 #custom-notification {
   color: #fbf1c7;
   font-size: 14px;
   padding: 2px 2px;
+}
+
+
+/* ================================ */
+/*             wifi                 */
+/* ================================ */
+
+#custom-wifi {
+  margin-bottom: 2px;
 }
