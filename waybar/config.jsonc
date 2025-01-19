@@ -26,15 +26,17 @@
     "battery",
     "custom/notification",
     "custom/wifi",
+    "custom/lock",
+    "custom/power"
   ],
 
   "custom/rofi": {
-		"format": "󰮯",
-		"on-click": "rofi -show drun",
+    "format": "󰮯",
+    "on-click": "rofi -show drun",
     "on-click-right": "sh ~/.config/waybar/scripts/power-menu.sh",
     "escape" : true,
     "tooltip" : false
-	},
+  },
 
   // Modules configuration
   "hyprland/workspaces": {
@@ -48,7 +50,7 @@
       "default": "",
     },
     "persistent-workspaces": {
-        "*": 5
+      "*": 5
     }
   },
 
@@ -147,15 +149,15 @@
     "format-connected-battery": "<span color='#458588'>󰂱 </span>",
 
     "tooltip-format": 
-      "{num_connections} connected",
+    "{num_connections} connected",
     "tooltip-format-disabled": 
-      "Bluetooth Disabled",
+    "Bluetooth Disabled",
     "tooltip-format-connected": 
-      "{num_connections} connected\n{device_enumerate}",
+    "{num_connections} connected\n{device_enumerate}",
     "tooltip-format-enumerate-connected": 
-      "{device_alias}",
+    "{device_alias}",
     "tooltip-format-enumerate-connected-battery": 
-      "{device_alias}: {device_battery_percentage}%",
+    "{device_alias}: {device_battery_percentage}%",
 
     "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
     "interval": 1,
@@ -163,25 +165,38 @@
     "max-length": 10
   },
 
-  "custom/notification": {
+
+  "custom/lock": {
     "tooltip": false,
-    "rotate": 0,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "󰅸 ",
-      "none": "󰂜 ",
-      "dnd-notification": "󰅸 ",
-      "dnd-none": "󱏨 ",
-      "inhibited-notification": "󰅸 ",
-      "inhibited-none": "󰂜 ",
-      "dnd-inhibited-notification": "󰅸 ",
-      "dnd-inhibited-none": "󱏨 "
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click-right": "swaync-client -d -sw",
-    "on-click": "swaync-client -t -sw",
-    "escape": true
-  }
+    "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+    "format": "",
+  },
+
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "sh ~/.config/waybar/scripts/power-menu.sh",
+    "format": "󰐥"
+  },
+
+  "custom/notification": {
+  "tooltip": false,
+  "rotate": 0,
+  "format": "{icon}",
+  "format-icons": {
+    "notification": "󰅸 ",
+    "none": "󰂜 ",
+    "dnd-notification": "󰅸 ",
+    "dnd-none": "󱏨 ",
+    "inhibited-notification": "󰅸 ",
+    "inhibited-none": "󰂜 ",
+    "dnd-inhibited-notification": "󰅸 ",
+    "dnd-inhibited-none": "󱏨 "
+  },
+  "return-type": "json",
+  "exec-if": "which swaync-client",
+  "exec": "swaync-client -swb",
+  "on-click-right": "swaync-client -d -sw",
+  "on-click": "swaync-client -t -sw",
+  "escape": true
+}
 }

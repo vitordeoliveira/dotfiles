@@ -53,6 +53,8 @@ window#waybar {
 #battery,
 #battery.critical,
 #battery.warning,
+#custom-power,
+#custom-lock,
 #clock {
   font-family: JetBrainsMono Nerd Font Propo;
   font-size: 15px;
