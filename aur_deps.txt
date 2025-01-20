@@ -1,6 +1,12 @@
 auto-cpufreq
+bisq
+bisq2
 brave-bin
+jdk22-graalvm-bin
 paru
 paru-debug
+rofi-lbonn-wayland-git
+swaylock-effects-git
 timeshift-autosnap
 wl-gammarelay
+wlogout
