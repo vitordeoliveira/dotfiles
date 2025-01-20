@@ -1,0 +1,11 @@
+alias ls='ls -l --color=auto'
+alias '..'='cd ..'
+alias ~='cd ~'
+alias grep='grep --color=auto'
+alias vim=nvim
+
+alias dub='cd ~/dotfiles/ && \
+pacman -Qqen > ~/dotfiles/arch_deps.txt && \
+paru -Qqm > ~/dotfiles/aur_deps.txt'
+
+

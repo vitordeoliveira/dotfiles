@@ -26,3 +26,5 @@ ln -sf ~/dotfiles/waybar/ ~/.config/
 ln -sf ~/dotfiles/lazygit/ ~/.config/
 
 ln -sf ~/dotfiles/wlogout/ ~/.config/
+
+ln -sf ~/dotfiles/sh/.aliases ~/.aliases
