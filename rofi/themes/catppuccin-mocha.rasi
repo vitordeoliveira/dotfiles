@@ -10,7 +10,7 @@
     fg-col2: @peach;
     grey: @overlay0;
 
-    font: "FontAwesome 15";
+    font: "JetBrainsMono Nerd Font 15";
 }
 
 
@@ -80,12 +80,8 @@ element-icon {
 
 element-text {
 highlight: underline bold;
-text-transform: lowercase;
 }
 
-element-text selected {
-    text-transform: bold lowercase;
-  }
 
 element selected {
     background-color:  @selected-col ;
