@@ -9,10 +9,8 @@
   "margin-left" :8,
 
   "modules-left": [
-    "custom/rofi",
     "hyprland/workspaces",
-    "hyprland/window",
-  ],
+    "hyprland/window", ],
 
   "modules-center": ["clock"],
 
@@ -41,6 +39,7 @@
       "transition-left-to-right": false
     },
     "modules":[   
+      "custom/rofi",
       "custom/lock",
       "custom/notification",
       "custom/wifi",
@@ -96,8 +95,8 @@
     "interval": 1,
     "format-icons": [" "," "," "," "," "],
     "format": "{icon}{capacity}%",
-    "format-plugged": "󰂅{capacity}%",
-    "format-alt": "󱧥{time}",
+    "format-plugged": "󰂅 {capacity}%",
+    "format-alt": "󱧥 {time}",
     "tooltip": false
   },
 
@@ -143,7 +142,7 @@
 
   "cpu": {
 	"interval": 10,
-	"format": " {}%",
+	"format": " {:0.1f}%",
 	"max-length": 10
 },
 

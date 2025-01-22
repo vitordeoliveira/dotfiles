@@ -27,32 +27,24 @@ window#waybar {
   border-radius: 15px;
 }
 
-
-.modules-right {
-  padding-left: 8px;
-}
-
-#custom-rofi {
-  background: transparent;
-  padding: 0 15px 0 15px;
-  border-radius: 15px;
-}
-
-#custom-rofi:hover{
-   background-color: @mauve;
-   color: @base;
+ 
+#hardware, #clock {
+  background-color: @surface0;
+  border-radius: 1rem;
+  margin: 5px;
+  padding: 0 10px 0 10px;
 }
 
 #actions{
   margin-left: -5px;
 }
 
-#custom-notification:hover, #custom-wifi:hover, #custom-lock:hover, #custom-power:hover{
+#custom-notification:hover, #custom-rofi:hover, #custom-wifi:hover, #custom-lock:hover, #custom-power:hover{
   background-color: @mauve;
   color: @base;
 }       
 
-#custom-lock{
+#custom-rofi{
   border-radius: 0 15px 15px 0;
 }
 
@@ -101,17 +93,18 @@ window#waybar {
 #custom-backlight,
 #custom-notification,
 #custom-wifi,
+#custom-rofi,
 #battery,
 #pulseaudio,
 #disk,
 #cpu,
 #memory,
 #backlight{
-  min-width:70px;
-  margin-right: 15px;
+  min-width:80px;
+  /*border: 1px solid red;*/
 }
 
-#custom-lock{
+#custom-rofi{
   margin-right: 0;
 }
 /* ================================ */
@@ -132,12 +125,6 @@ tooltip{
     background-color: @crust;
 }
 
-tooltip #clock {
-    /* Styling for the current day */
-    background-color: #ff69b4; /* Example background color for today */
-    color: @red; /* Text color for today */
-}
-          
 #disk {
   color: @red;
 }
@@ -162,18 +149,10 @@ tooltip #clock {
 }
 
 /* ================================ */
-/*            memory                */
-/* ================================ */
-#custom-memory {
-  color: #458588;
-  border: 2px solid #458588;
-}
-
-/* ================================ */
 /*         pulseaudio               */
 /* ================================ */
 #pulseaudio {
-  color: @red;
+  color: @blue;
 }
 
 /* ================================ */
@@ -194,10 +173,8 @@ tooltip #clock {
 /* ================================ */
 /*            clock                 */
 /* ================================ */
-#clock.time {
-}
-
-#clock.date {
+#clock {
+  background-color: @surface0;
 }
 
 
