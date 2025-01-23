@@ -27,4 +27,27 @@ ln -sf ~/dotfiles/lazygit/ ~/.config/
 
 ln -sf ~/dotfiles/wlogout/ ~/.config/
 
-ln -sf ~/dotfiles/sh/.aliases ~/.aliases
+ln -sf ~/dotfiles/sh/aliases ~/.aliases
+
+ln -sf ~/dotfiles/sh/custom_exports ~/.custom_exports
+
+sudo chmod +x ~/dotfiles/bin/*
+sudo ln -sf ~/dotfiles/bin/* /usr/bin/
+
+sudo ln -sf ~/dotfiles/icons/* /usr/share/pixmaps/ 
+
+### enable .desktop files in the system
+sudo ln -sf ~/dotfiles/apps/* /usr/share/applications/
+
+## to make UHK agent work
+
+```bash
+sudo -s
+
+cp ~/dotfiles/config/50-uhk60.rules /etc/udev/rules.d
+udevadm control --reload-rules
+udevadm trigger
+udevadm settle
+```
+```
+```
