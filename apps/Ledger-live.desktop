@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ledger Live AppImage
+Exec=ledger-live-desktop-2.94.0-linux-x86_64.AppImage %U
+Terminal=false
+Type=Application
+Icon=ledger-live-desktop
+StartupWMClass=Ledger Live
+Comment=Ledger Live - Desktop
+MimeType=x-scheme-handler/ledgerlive;
+Categories=Finance;
