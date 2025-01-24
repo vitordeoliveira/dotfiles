@@ -10,7 +10,8 @@
 
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/window", ],
+    "hyprland/window",
+  ],
 
   "modules-center": ["clock"],
 
@@ -44,6 +45,20 @@
       "custom/wifi",
       "custom/power",      
       "custom/lock"]
+  },
+
+
+  "group/quicktab":{
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "childs",
+      "transition-left-to-right": true
+    },
+    "modules":[   
+      "custom/blog_vps",
+      "custom/invisible_matrix_vps"
+    ]
   },
 
   "custom/rofi": {
@@ -197,5 +212,19 @@
     "on-click-right": "swaync-client -d -sw",
     "on-click": "swaync-client -t -sw",
     "escape": true
+  },
+
+  "custom/blog_vps": {
+    "tooltip": false,
+    "format": " ",
+    "on-click": "~/.config/waybar/scripts/connect_to_blog.sh"
+  },
+
+  "custom/invisible_matrix_vps": {
+    "tooltip": false,
+    "format": " ",
+    "on-click": "alacritty -e ssh invisible_matrix@46.202.128.101"
   }
+
 }
+
