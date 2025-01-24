@@ -3,3 +3,5 @@
 
 # But do not ignore the tpm directory
 !/tmux/plugins/tpm
+
+/bin
