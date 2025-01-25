@@ -1,2 +1,4 @@
 export PATH="$HOME/.config/bin:$PATH"
+export IP_BLOG=46.202.128.101
+
 
