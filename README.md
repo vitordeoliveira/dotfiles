@@ -29,9 +29,12 @@ ln -sf ~/dotfiles/wlogout/ ~/.config/
 
 ln -sf ~/dotfiles/sh/aliases ~/.aliases
 
-ln -sf ~/dotfiles/tool-versions ~/.tool-versions
+ln -sf ~/dotfiles/sh/others ~/.others
 
 ln -sf ~/dotfiles/sh/custom_exports ~/.custom_exports
+
+ln -sf ~/dotfiles/tool-versions ~/.tool-versions
+
 
 sudo chmod +x ~/dotfiles/bin/*
 sudo ln -sf ~/dotfiles/bin/* /usr/bin/
