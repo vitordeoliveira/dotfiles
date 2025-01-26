@@ -27,6 +27,8 @@ ln -sf ~/dotfiles/lazygit/ ~/.config/
 
 ln -sf ~/dotfiles/wlogout/ ~/.config/
 
+ln -sf ~/dotfiles/gtk-3.0/ ~/.config/
+
 ln -sf ~/dotfiles/sh/aliases ~/.aliases
 
 ln -sf ~/dotfiles/sh/others ~/.others
