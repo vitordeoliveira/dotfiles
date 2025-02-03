@@ -4,6 +4,7 @@ alias ~='cd ~'
 alias grep='grep --color=auto'
 alias vim=nvim
 alias cl=clear
+alias hyprc='nvim ~/.config/hypr/hyprland.conf'
 
 alias dub='cd ~/dotfiles/ && \
 pacman -Qqen > ~/dotfiles/arch_deps.txt && \
