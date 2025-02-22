@@ -16,7 +16,15 @@
 
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": ["pulseaudio", "backlight", "battery", "cpu", "disk", "memory"],
+    "modules": [
+      "pulseaudio",
+      "backlight",
+      "custom/wl-gammarelay-temperature",
+      "battery",
+      "cpu",
+      "disk",
+      "memory",
+    ],
   },
 
   "group/actions": {
@@ -102,7 +110,7 @@
     "timezone": "America/Sao_Paulo",
     "interval": 1,
     "format": " 🇧🇷 {:%H:%M:%S}",
-    "format-alt": " {:%A, %B %d, %Y - %H:%M:%S  (%z)}",
+    "format-alt": " 🇧🇷 {:%A, %B %d, %Y - %H:%M:%S  (%z)}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "month",
@@ -126,9 +134,10 @@
   },
 
   "clock#portugal": {
+    "timezone": "Portugal",
     "interval": 1,
     "format": " 🇵🇹 {:%H:%M:%S}",
-    "format-alt": " {:%A, %B %d, %Y - %H:%M:%S  (%z)}",
+    "format-alt": " 🇵🇹 {:%A, %B %d, %Y - %H:%M:%S  (%z)}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "month",
@@ -155,6 +164,15 @@
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+
+  "custom/wl-gammarelay-temperature": {
+    "format": "{} ",
+    "exec": "busctl --user get-property rs.wl-gammarelay / rs.wl.gammarelay Temperature | cut -d ' ' -f2",
+    // "exec-if": "busctl --user monitor rs.wl-gammarelay | grep --line-buffered Temperature",
+    "interval": 1,
+    "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+    "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100",
   },
 
   "disk": {
