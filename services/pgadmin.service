@@ -1,0 +1,13 @@
+[Unit]
+Description=pgAdmin 4 Web Service
+After=network.target postgresql.service
+
+[Service]
+WorkingDirectory=/home/vitordeoliveira/pgadmin4
+ExecStart=/bin/bash -c "source /home/vitordeoliveira/pgadmin4/bin/activate && pgadmin4"
+Restart=always
+User=vitordeoliveira
+
+[Install]
+WantedBy=multi-user.target
+
