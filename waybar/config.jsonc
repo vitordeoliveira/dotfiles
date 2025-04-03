@@ -18,7 +18,7 @@
     "orientation": "horizontal",
     "modules": [
       "pulseaudio",
-      "backlight",
+      // "backlight",
       // "custom/wl-gammarelay-temperature",
       "battery",
       "cpu",
