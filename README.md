@@ -33,6 +33,8 @@ ln -sf ~/dotfiles/gtk-3.0/ ~/.config/
 
 ln -sf ~/dotfiles/alacritty/ ~/.config/
 
+ln -sf ~/dotfiles/starship/ ~/.config/
+
 ln -sf ~/dotfiles/sh/aliases ~/.aliases
 
 ln -sf ~/dotfiles/sh/others ~/.others

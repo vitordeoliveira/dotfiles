@@ -1,2 +1,3 @@
-. /opt/asdf-vm/asdf.sh
+# . /opt/asdf-vm/asdf.sh
 . /home/vitordeoliveira/.asdf/installs/rust/1.84.0/env
+eval "$(starship init bash)"
