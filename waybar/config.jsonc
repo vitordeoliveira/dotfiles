@@ -10,7 +10,12 @@
 
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
 
-  "modules-center": ["clock#portugal", "clock#brasil"],
+  "modules-center": [
+    "clock#california",
+    "clock#portugal",
+    "clock#brasil",
+    "clock#dubai",
+  ],
 
   "modules-right": ["group/hardware", "group/actions"],
 
@@ -111,6 +116,60 @@
     "interval": 1,
     "format": " 🇧🇷 {:%H:%M:%S}",
     "format-alt": " 🇧🇷 {:%A, %B %d, %Y - %H:%M:%S  (%z)}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#cba6f7'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weekdays": "<span color='#89b4fa'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+
+  "clock#california": {
+    "timezone": "America/Los_Angeles",
+    "interval": 1,
+    "format": " 🇺🇸 {:%H:%M:%S}",
+    "format-alt": " 🇺🇸 {:%A, %B %d, %Y - %H:%M:%S  (%z)}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#cba6f7'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weekdays": "<span color='#89b4fa'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+
+  "clock#dubai": {
+    "timezone": "Asia/Dubai",
+    "interval": 1,
+    "format": " 🇦🇪 {:%H:%M:%S}",
+    "format-alt": " 🇦🇪 {:%A, %B %d, %Y - %H:%M:%S  (%z)}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "month",
