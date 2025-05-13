@@ -12,8 +12,8 @@
 
   "modules-center": [
     "clock#california",
-    "clock#portugal",
     "clock#brasil",
+    "clock#portugal",
     "clock#dubai",
   ],
 
