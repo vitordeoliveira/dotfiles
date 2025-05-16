@@ -1,3 +1,11 @@
 # . /opt/asdf-vm/asdf.sh
 . /home/vitordeoliveira/.asdf/installs/rust/1.84.0/env
 eval "$(starship init bash)"
+
+# Enable bash-completion if available
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+fi
+
+bind "\"\C-a\":\"shellai\n\""
+bind '"\C-x\C-e": "~/.config/scripts/hyprpaper_reload.sh\n"'

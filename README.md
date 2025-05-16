@@ -25,6 +25,10 @@ rm -rf ~/.config/hypr/ && ln -sf ~/dotfiles/hypr/ ~/.config/
 
 ln -sf ~/dotfiles/waybar/ ~/.config/
 
+ln -sf ~/dotfiles/scripts/ ~/.config/
+
+sudo chmod +x ~/.config/scripts/\*
+
 ln -sf ~/dotfiles/lazygit/ ~/.config/
 
 ln -sf ~/dotfiles/wlogout/ ~/.config/
@@ -34,6 +38,8 @@ ln -sf ~/dotfiles/gtk-3.0/ ~/.config/
 ln -sf ~/dotfiles/alacritty/ ~/.config/
 
 ln -sf ~/dotfiles/starship/ ~/.config/
+
+ln -sf ~/dotfiles/wallpapers/ ~/.config/
 
 ln -sf ~/dotfiles/sh/aliases ~/.aliases
 
