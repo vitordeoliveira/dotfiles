@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Cursor
+Comment=AI-powered code editor
+Exec=/home/vitordeoliveira/.local/bin/Cursor
+Icon=cursor
+Terminal=false
+Type=Application
+Categories=Development;IDE;

@@ -2,7 +2,7 @@
 Name=Ultimate Hacking Keyboard
 GenericName=UHK-agent
 Comment=UHK Agent
-Exec=UHK.Agent-5.0.2-linux-x86_64.AppImage
+Exec=UHK.Agent-5.1.0-linux-x86_64.AppImage
 Icon=UHK
 Terminal=false
 Type=Application
