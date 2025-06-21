@@ -56,7 +56,11 @@ sudo ln -sf ~/dotfiles/icons/\* /usr/share/pixmaps/
 
 ### enable .desktop files in the system
 
-sudo ln -sf ~/dotfiles/apps/\* /usr/share/applications/
+sudo ln -sf ~/dotfiles/apps/system\* /usr/share/applications/
+
+### enable user .desktop files
+
+mkdir -p ~/.local/share/applications/dotfilesapps && ln -sf ~/dotfiles/apps/local/\* ~/.local/share/applications/dotfilesapps/
 
 ## to make UHK agent work
 
