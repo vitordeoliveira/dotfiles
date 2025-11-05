@@ -27,24 +27,28 @@ window#waybar {
   border-radius: 15px;
 }
 
- 
-#hardware, #clock {
+#hardware,
+#clock {
   background-color: @surface0;
   border-radius: 1rem;
   margin: 5px;
   padding: 0 10px 0 10px;
 }
 
-#actions{
+#actions {
   margin-left: -5px;
 }
 
-#custom-notification:hover, #custom-rofi:hover, #custom-wifi:hover, #custom-lock:hover, #custom-power:hover{
+#custom-notification:hover,
+#custom-rofi:hover,
+#custom-wifi:hover,
+#custom-lock:hover,
+#custom-power:hover {
   background-color: @mauve;
   color: @base;
-}       
+}
 
-#custom-rofi{
+#custom-rofi {
   border-radius: 0 15px 15px 0;
 }
 
@@ -87,7 +91,6 @@ window#waybar {
   margin-bottom: 5px;
 }
 
-
 #custom-lock,
 #custom-power,
 #custom-backlight,
@@ -99,12 +102,12 @@ window#waybar {
 #disk,
 #cpu,
 #memory,
-#backlight{
-  min-width:80px;
+#backlight {
+  min-width: 80px;
   /*border: 1px solid red;*/
 }
 
-#custom-rofi{
+#custom-rofi {
   margin-right: 0;
 }
 /* ================================ */
@@ -120,9 +123,9 @@ window#waybar {
 /*            disk                 */
 /* ================================ */
 
-tooltip{
-    border-radius: 5px;
-    background-color: @crust;
+tooltip {
+  border-radius: 5px;
+  background-color: @crust;
 }
 
 #disk {
@@ -137,7 +140,7 @@ tooltip{
   color: @mauve;
 }
 
-#backlight{
+#backlight {
   color: @yellow;
 }
 
@@ -177,10 +180,8 @@ tooltip{
   background-color: @surface0;
 }
 
-
 #custom-notification {
 }
-
 
 /* ================================ */
 /*             wifi                 */

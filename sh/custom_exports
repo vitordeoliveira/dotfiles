@@ -6,3 +6,6 @@ export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=Adwaita-Dark
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export XDG_CONFIG_HOME=~/.config/
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH="$PATH:~/.asdf/installs/nodejs/23.6.1/bin"
+export AWS_PROFILE=saml

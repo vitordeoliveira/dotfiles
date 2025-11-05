@@ -1,3 +1,6 @@
-rust 1.84.0
+rust 1.91.0
 nodejs 23.6.1
 lazydocker 0.24.1
+awscli 2.27.20
+maven 3.9.9
+python 3.13.3

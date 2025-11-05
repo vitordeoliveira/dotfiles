@@ -9,3 +9,6 @@ fi
 
 bind "\"\C-a\":\"shellai\n\""
 bind '"\C-x\C-e": "~/.config/scripts/hyprpaper_reload.sh\n"'
+
+
+. /home/vitordeoliveira/.nix-profile/etc/profile.d/nix.sh

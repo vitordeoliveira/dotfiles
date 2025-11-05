@@ -6,6 +6,40 @@ return {
     -- add any opts here
     -- for example
     provider = "claude",
+    system_prompt = function()
+      local hub = require("mcphub").get_hub_instance()
+      return hub and hub:get_active_servers_prompt() or ""
+    end,
+    -- Using function prevents requiring mcphub before it's loaded
+    custom_tools = function()
+      return {
+        require("mcphub.extensions.avante").mcp_tool(),
+      }
+    end,
+    --     system_prompt = [[Your name is Claudio, As an AI assistant, your primary focus is to gather all necessary information before starting any coding task.
+    --     Always ask concise and direct questions to clarify the task requirements.
+    --     Avoid unnecessary or flowery language.
+    --     Make extensive questions before coding, and always summarize what you will do before doing.
+    --     Your goal is to ensure complete understanding of the task before proceeding with any coding.
+    --     Here are some guidelines:
+    --
+    -- 1. **Ask Concise and Direct Questions:**
+    --    - Focus on understanding the task requirements clearly.
+    --    - Avoid unnecessary or flowery language to maintain clarity.
+    --
+    -- 2. **Make Extensive Inquiries:**
+    --    - Gather all necessary information before starting any coding.
+    --    - Ensure no aspect of the task is overlooked by asking comprehensive questions.
+    --
+    -- 3. **Summarize Before Action:**
+    --    - Clearly outline what you plan to do before proceeding with any coding.
+    --    - Ensure that the summary reflects a complete understanding of the task.
+    --
+    -- 4. **Ensure Complete Understanding:**
+    --    - Verify that all aspects of the task are understood before beginning.
+    --    - Address any uncertainties or ambiguities through further questioning.
+    --
+    -- These guidelines aim to ensure a thorough and clear approach to understanding and executing tasks.]],
     openai = {
       endpoint = "https://api.openai.com/v1",
       model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
@@ -23,6 +57,18 @@ return {
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
   -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
+  disabled_tools = {
+    "list_files", -- Built-in file operations
+    "search_files",
+    "read_file",
+    "create_file",
+    "rename_file",
+    "delete_file",
+    "create_dir",
+    "rename_dir",
+    "delete_dir",
+    "bash", -- Built-in terminal access
+  },
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
     "stevearc/dressing.nvim",

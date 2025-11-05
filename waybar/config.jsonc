@@ -13,8 +13,8 @@
   "modules-center": [
     "clock#california",
     "clock#brasil",
+    // "clock#dubai",
     "clock#portugal",
-    "clock#dubai",
   ],
 
   "modules-right": ["group/hardware", "group/actions"],
@@ -22,6 +22,7 @@
   "group/hardware": {
     "orientation": "horizontal",
     "modules": [
+      "custom/keyboard",
       "pulseaudio",
       // "backlight",
       // "custom/wl-gammarelay-temperature",
@@ -93,9 +94,9 @@
 
   "pulseaudio": {
     "format": " {volume}%",
-    "format-muted": "<span>  </span>{volume}%",
-    "format-bluetooth": "<span> 󰂰 </span>{volume}%",
-    "format-bluetooth-muted": "<span> 󰂲 </span>{volume}%",
+    "format-muted": "<span> </span>{volume}%",
+    "format-bluetooth": "<span>󰂰 </span>{volume}%",
+    "format-bluetooth-muted": "<span>󰂲 </span>{volume}%",
     "format-source": "{volume}% ",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip": false,
@@ -223,6 +224,14 @@
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+
+  "custom/keyboard": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/hypr-keyboard-layout.sh",
+    "interval": 1,
+    "tooltip-format": "Current:{}\nSwitch Command: ALT+SHIFT",
+    // "tooltip": false,
   },
 
   // "custom/wl-gammarelay-temperature": {
