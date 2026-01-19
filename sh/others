@@ -1,5 +1,5 @@
 # . /opt/asdf-vm/asdf.sh
-. /home/vitordeoliveira/.asdf/installs/rust/1.84.0/env
+# . /home/vitordeoliveira/.asdf/installs/rust/1.84.0/env
 eval "$(starship init bash)"
 
 # Enable bash-completion if available
@@ -10,5 +10,9 @@ fi
 bind "\"\C-a\":\"shellai\n\""
 bind '"\C-x\C-e": "~/.config/scripts/hyprpaper_reload.sh\n"'
 
+# . /home/vitordeoliveira/.nix-profile/etc/profile.d/nix.sh
 
-. /home/vitordeoliveira/.nix-profile/etc/profile.d/nix.sh
+export PATH="$HOME/.asdf/installs/rust/1.91.1/bin:$PATH"
+. "/home/vitordeoliveira/.asdf/installs/rust/1.91.1/env"
+
+
